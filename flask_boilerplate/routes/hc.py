@@ -2,7 +2,7 @@ from typing import Tuple
 
 from flask import Blueprint, Response, jsonify
 
-hc_bp = Blueprint("hc", __name__, url_prefix="/hc")
+hc_bp = Blueprint("hc", __name__, url_prefix="/api/hc")
 
 
 @hc_bp.route("", methods=["GET"])
