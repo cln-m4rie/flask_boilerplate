@@ -4,3 +4,4 @@
 *.pyc
 app.pid
 *.log
+.env
