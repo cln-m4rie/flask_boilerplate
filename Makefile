@@ -9,8 +9,11 @@ format: ## auto format
 		isort -rc flask_boilerplate && \
 		black --line-length 119 flask_boilerplate
 
+run: ## run app in local
+	(cd flask_boilerplate && SALT=test python run.py)
+
 test: ## run all test
-	pytest flask_boilerplate/tests
+	SALT=test pytest flask_boilerplate/tests
 
 help:  ## Show all of tasks
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'

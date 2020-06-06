@@ -8,8 +8,7 @@ class FlaskRequester:
     def all(cls) -> dict:
         res: dict = request.args.to_dict(flat=True)
         if cls.is_post():
-            req_data = request.form.to_dict(
-                flat=True) or request.get_json(force=True)
+            req_data = request.form.to_dict(flat=True) or request.get_json(force=True)
             if isinstance(req_data, dict):
                 res.update(req_data)
             elif isinstance(req_data, list):

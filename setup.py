@@ -4,6 +4,7 @@ requirements = [
     'flask>=1.1.2',
     'environs',
     'jsonschema',
+    'flask_cors',
 ]
 
 develop_requirements = [
@@ -17,8 +18,13 @@ develop_requirements = [
     'pytest',
 ]
 
+uwsgi_requirements = [
+    'uwsgi',
+]
+
 extras_require = {
     'dev': develop_requirements,
+    'uwsgi': uwsgi_requirements,
 }
 
 setup(
